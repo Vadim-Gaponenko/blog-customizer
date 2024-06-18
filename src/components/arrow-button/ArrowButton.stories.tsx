@@ -11,6 +11,10 @@ type Story = StoryObj<typeof ArrowButton>;
 
 export const ArrowButtonStory: Story = {
 	render: () => {
+		const openTheForm = () => {
+			// Обработчик события кнопки стрелки
+		};
+
 		return (
 			<>
 				<ArrowButton />
