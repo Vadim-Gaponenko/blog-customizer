@@ -88,63 +88,73 @@ export const ArticleParamsForm = ({
 					<Text as={'h2'} size={31} weight={800} uppercase={true}>
 						Задайте параметры
 					</Text>
-					<Select
-						title='Шрифт'
-						selected={formState.fontFamily}
-						options={fontFamilyOptions}
-						onChange={(selectedOption) =>
-							setFormState((prevState) => ({
-								...prevState,
-								fontFamily: selectedOption,
-							}))
-						}
-					/>
-					<RadioGroup
-						options={fontSizeOptions}
-						selected={formState.fontSize}
-						title='Размер шрифта'
-						name='Размер шрифта'
-						onChange={(selectedOption) =>
-							setFormState((prevState) => ({
-								...prevState,
-								fontSize: selectedOption,
-							}))
-						}
-					/>
-					<Select
-						options={fontColors}
-						selected={formState.fontColor}
-						title='Цвет шрифта'
-						onChange={(selectedOption) =>
-							setFormState((prevState) => ({
-								...prevState,
-								fontColor: selectedOption,
-							}))
-						}
-					/>
+					<div className={styles.selectContainer}>
+						<Select
+							title='Шрифт'
+							selected={formState.fontFamily}
+							options={fontFamilyOptions}
+							onChange={(selectedOption) =>
+								setFormState((prevState) => ({
+									...prevState,
+									fontFamily: selectedOption,
+								}))
+							}
+						/>
+					</div>
+					<div className={styles.selectContainer}>
+						<RadioGroup
+							options={fontSizeOptions}
+							selected={formState.fontSize}
+							title='Размер шрифта'
+							name='Размер шрифта'
+							onChange={(selectedOption) =>
+								setFormState((prevState) => ({
+									...prevState,
+									fontSize: selectedOption,
+								}))
+							}
+						/>
+					</div>
+					<div className={styles.selectContainer}>
+						<Select
+							options={fontColors}
+							selected={formState.fontColor}
+							title='Цвет шрифта'
+							onChange={(selectedOption) =>
+								setFormState((prevState) => ({
+									...prevState,
+									fontColor: selectedOption,
+								}))
+							}
+						/>
+					</div>
 					<Separator />
-					<Select
-						options={backgroundColors}
-						selected={formState.backgroundColor}
-						title='Цвет фона'
-						onChange={(selectedOption) =>
-							setFormState((prevState) => ({
-								...prevState,
-								backgroundColor: selectedOption,
-							}))
-						}
-					/>
-					<Select
-						options={contentWidthArr}
-						selected={formState.contentWidth}
-						title='Ширина контента'
-						onChange={(selectedOption) =>
-							setFormState((prevState) => ({
-								...prevState,
-								contentWidth: selectedOption,
-							}))
-						}
-					/>
+					<div className={styles.selectContainer}>
+						<Select
+							options={backgroundColors}
+							selected={formState.backgroundColor}
+							title='Цвет фона'
+							onChange={(selectedOption) =>
+								setFormState((prevState) => ({
+									...prevState,
+									backgroundColor: selectedOption,
+								}))
+							}
+						/>
+					</div>
+					<div className={styles.selectContainer}>
+						<Select
+							options={contentWidthArr}
+							selected={formState.contentWidth}
+							title='Ширина контента'
+							onChange={(selectedOption) =>
+								setFormState((prevState) => ({
+									...prevState,
+									contentWidth: selectedOption,
+								}))
+							}
+						/>
+					</div>
 					<div className={styles.bottomContainer}>
 						<Button title='Сбросить' type='reset' />
 						<Button title='Применить' type='submit' />

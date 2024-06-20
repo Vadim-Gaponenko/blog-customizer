@@ -30,3 +30,8 @@
 	justify-content: space-between;
 	margin-top: auto;
 }
+
+.selectContainer:not(:last-child) {
+	margin-top: 50px;
+	/* Замените на желаемую величину отступа */
+}
